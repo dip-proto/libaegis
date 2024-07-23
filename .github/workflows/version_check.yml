@@ -14,5 +14,5 @@ jobs:
 
       - name: Version check
         run: |
-            grep -E 'const version =' build.zig | grep -Eq '"${{  github.ref_name }}"' || exit 78
+            grep -E 'const version =' build.zig | grep -E '"${{  github.ref_name }}"' || exit 78
             echo "Version check passed."
